@@ -1,9 +1,29 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import "./classicMoviesPage.css"
 import MovieList from "../components/movieList/movieList"
+import moviesApi from '../api/moviesApi';
+
 
 
 function ClassicMoviesPage() {
+  const [movies, setMovies] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    (async () => {
+      const moviesData = await moviesApi.getAll();
+
+      // for (let i = 0; i < moviesData.cinemaworld.length; i++) {
+      //   moviesData.cinemaworld[i].filmworldPrice =
+      //     moviesData.filmworld[i].Price;
+      // }
+      setMovies(moviesData.data);
+    })();
+  }, []);
+
+  console.log(movies)
+
+
   return (
     <div className="movies__page">
       <h1>Prince's Theatre</h1>
