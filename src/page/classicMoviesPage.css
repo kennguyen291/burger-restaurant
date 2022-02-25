@@ -30,10 +30,18 @@ h1 {
 
 
 
+
+
 @media only screen and (min-width: 768px){
 
     h3 {
-        visibility: hidden;
+        display: none;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+
+    .movieList__container{
+        width: 90%
     }
 
 }

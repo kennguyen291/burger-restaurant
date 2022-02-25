@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import "./classicMoviesPage.css"
 import MovieList from "../components/movieList/movieList"
 import moviesApi from '../api/moviesApi';
+import MovieListSkeleton from '../components/movieListSkeleton';
 
 
 
@@ -11,13 +12,13 @@ function ClassicMoviesPage() {
 
   useEffect(() => {
     (async () => {
-      const moviesData = await moviesApi.getAll();
-
-      // for (let i = 0; i < moviesData.cinemaworld.length; i++) {
-      //   moviesData.cinemaworld[i].filmworldPrice =
-      //     moviesData.filmworld[i].Price;
-      // }
-      setMovies(moviesData.data);
+      try{
+        const {data} = await moviesApi.getAll();
+        setMovies(data);
+      } catch (error) {
+        console.log("failed to fetch movies list", error)
+      }
+      
     })();
   }, []);
 
@@ -39,9 +40,10 @@ function ClassicMoviesPage() {
 
       <h3>Classic Movie List</h3>
 
-      <div className="movieList__container">
-      <MovieList />
-      </div>
+     
+        {loading ? <MovieListSkeleton/> : <MovieList />}
+      
+      
       
     </div>
   )
