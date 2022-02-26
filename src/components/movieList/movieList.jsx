@@ -7,7 +7,7 @@ function movieList({moviesList}) {
   return (
     <div className = "movielist__container">
       {moviesList.map((movie) => (
-        <Movie movie= {movie}/>
+        <Movie item key={movie.ID} movie= {movie} cinemaworldIsCheaper = {movie.cinemaworldIsCheaper}/>
       ))}</div>
   )
 }
