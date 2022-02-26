@@ -1,9 +1,14 @@
 import React from 'react'
+import Movie from "../movie/movie"
+import "./movieList.css"
 
 
-function movieList() {
+function movieList({moviesList}) {
   return (
-    <div>movieList</div>
+    <div className = "movielist__container">
+      {moviesList.map((movie) => (
+        <Movie movie= {movie}/>
+      ))}</div>
   )
 }
 
