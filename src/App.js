@@ -1,6 +1,5 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ClassicMoviesPage from "./page/ClassicMoviesPage";
 import ErrorPage from "./page/ErrorPage";
 

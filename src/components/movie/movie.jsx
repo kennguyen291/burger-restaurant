@@ -1,15 +1,9 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import {Skeleton} from "@material-ui/lab"
+
 import "./movie.css"
 
 
 function Movie({movie,  cinemaworldIsCheaper}) {
-
- 
-  
-  
-
 
   return (
     

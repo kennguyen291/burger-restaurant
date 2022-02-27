@@ -6,8 +6,6 @@ import MovieListSkeleton from '../components/movieListSkeleton/movieListSkeleton
 import { useNavigate } from "react-router-dom";
 
 
-
-
 function ClassicMoviesPage() {
   const [moviesList, setMoviesList] = useState([]);
   const [loading, setLoading] = useState(true);
