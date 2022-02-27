@@ -2,27 +2,32 @@ import React, {useEffect, useState} from 'react'
 import "./classicMoviesPage.css"
 import MovieList from "../components/movieList/movieList"
 import moviesApi from '../api/moviesApi';
-import MovieListSkeleton from '../components/movieListSkeleton';
+import MovieListSkeleton from '../components/movieListSkeleton/movieListSkeleton';
+import { useNavigate } from "react-router-dom";
+
 
 
 
 function ClassicMoviesPage() {
-  const [movies, setMovies] = useState([]);
+  const [moviesList, setMoviesList] = useState([]);
   const [loading, setLoading] = useState(true);
-
+  const navigate = useNavigate();
+  
   useEffect(() => {
     (async () => {
       try{
         const {data} = await moviesApi.getAll();
-        setMovies(data);
+        setMoviesList(data);
+        setLoading(false)
       } catch (error) {
+        navigate("/ErrorPage")
         console.log("failed to fetch movies list", error)
       }
       
     })();
   }, []);
 
-  console.log(movies)
+  console.log(moviesList)
 
 
   return (
@@ -39,12 +44,8 @@ function ClassicMoviesPage() {
       
 
       <h3>Classic Movie List</h3>
-
-     
-        {loading ? <MovieListSkeleton/> : <MovieList />}
-      
-      
-      
+    
+      {loading ? <MovieListSkeleton/> : <MovieList moviesList = {moviesList} />} 
     </div>
   )
 }

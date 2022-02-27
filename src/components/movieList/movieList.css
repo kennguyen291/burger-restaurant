@@ -1,0 +1,21 @@
+.movielist__container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items:center ;
+    justify-content: center;
+    gap: 20px;
+   
+
+}
+
+
+@media only screen and (min-width: 768px){
+
+    .movielist__container {
+        gap: 100px;
+        margin-top: 60px;
+        width: 85%;
+    }
+
+}
