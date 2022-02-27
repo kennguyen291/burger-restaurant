@@ -3,13 +3,16 @@ import "./classicMoviesPage.css"
 import MovieList from "../components/movieList/movieList"
 import moviesApi from '../api/moviesApi';
 import MovieListSkeleton from '../components/movieListSkeleton/movieListSkeleton';
+import { useNavigate } from "react-router-dom";
+
 
 
 
 function ClassicMoviesPage() {
   const [moviesList, setMoviesList] = useState([]);
   const [loading, setLoading] = useState(true);
-
+  const navigate = useNavigate();
+  
   useEffect(() => {
     (async () => {
       try{
@@ -17,6 +20,7 @@ function ClassicMoviesPage() {
         setMoviesList(data);
         setLoading(false)
       } catch (error) {
+        navigate("/ErrorPage")
         console.log("failed to fetch movies list", error)
       }
       
@@ -40,12 +44,8 @@ function ClassicMoviesPage() {
       
 
       <h3>Classic Movie List</h3>
-
-     
-        {loading ? <MovieListSkeleton/> : <MovieList moviesList = {moviesList} />}
-      
-      
-      
+    
+      {loading ? <MovieListSkeleton/> : <MovieList moviesList = {moviesList} />} 
     </div>
   )
 }
