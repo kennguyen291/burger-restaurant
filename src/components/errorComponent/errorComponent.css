@@ -10,13 +10,9 @@
     font-family: 'Patrick Hand', cursive;
 }  
 
-h1 {
-    margin-top: 60px;;
-   font-size: 37px;
-}
 
 .error__message {
-    margin-top: 150px;
+    margin-top: 100px;
     text-align: center;
     font-size: 30px
 

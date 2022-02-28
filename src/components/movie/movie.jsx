@@ -15,9 +15,7 @@ function Movie({movie,  cinemaworldIsCheaper}) {
             alt={movie.Title}    
             />
         </div>
-       
-
-        <div className="movie__title">{movie.Title}</div>
+        <div  className="movie__title">{movie.Title}</div>
         <div className="price__section">
           <div className="provider">
             <div>Cinemaworld</div>
