@@ -3,7 +3,7 @@ import Movie from "../movie/movie"
 import "./movieList.css"
 
 
-function movieList({moviesList}) {
+function MovieList({moviesList}) {
   return (
     <div className = "movielist__container">
       {moviesList.map((movie) => (
@@ -14,4 +14,4 @@ function movieList({moviesList}) {
 
 
 
-export default movieList
+export default MovieList

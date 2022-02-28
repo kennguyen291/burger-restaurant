@@ -1,15 +1,9 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import {Skeleton} from "@material-ui/lab"
+
 import "./movie.css"
 
 
 function Movie({movie,  cinemaworldIsCheaper}) {
-
- 
-  
-  
-
 
   return (
     
@@ -21,9 +15,7 @@ function Movie({movie,  cinemaworldIsCheaper}) {
             alt={movie.Title}    
             />
         </div>
-       
-
-        <div className="movie__title">{movie.Title}</div>
+        <div  className="movie__title">{movie.Title}</div>
         <div className="price__section">
           <div className="provider">
             <div>Cinemaworld</div>
