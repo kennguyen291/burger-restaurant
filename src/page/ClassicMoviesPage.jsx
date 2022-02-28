@@ -27,13 +27,13 @@ function ClassicMoviesPage() {
         setLoading(false)
         setError(true)
         
-        console.log("failed to fetch movies list", error)
+        // console.log("failed to fetch movies list", error)
       }
       
     })();
   }, []);
 
-  console.log(moviesList)
+  // console.log(moviesList)
 
 
   return (
