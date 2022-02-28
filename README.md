@@ -1,7 +1,17 @@
 
+
+![Screen Sho![Screen Shot 2022-02-28 at 4 48 19 pm](https://user-images.githubusercontent.com/58890818/155931303-c182b869-73a5-47a2-842d-f26b8d983e95.png)
+t 2022-02-28 at 4 47 40 pm](https://user-images.githubusercontent.com/58890818/155931267-b1161bd3-5a31-401c-8558-29c7cb2b431f.png)
+
+![Screen Shot 2022-02-28 at 4 48 19 pm](https://user-images.githubusercontent.com/58890818/155931414-18750c56-0651-4041-9ccf-ba40f0539acc.png)
+
+![Screen Shot 2022-02-28 at 4 48 39 pm](https://user-images.githubusercontent.com/58890818/155931431-c9d7cba2-6618-4bc6-806f-fb85c13709f5.png)
+
+
 # Context
 This app is a price comparison tool to compare price from two cinemas – Cinemaworld and Filmworld. The app will display both prices, and then calculate to highlight the cheaper ones. The movie catalogue data comes from 2 API, which are not reliable. Therefore, instead of letting the app crashes, a solution has been made to notify users about the issue, and recommend users to reload the page.
 Also, this app can be used properly in both desktop and mobile.
+I chose React framework to build this app since I am most comfortable in JavaScript language and this framework. Moreover, the React community is among the biggest, which can provide many documents, helps, and tools to build.
 
 # Architectural elements and decisions
 The app will have: 
