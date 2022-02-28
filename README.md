@@ -15,6 +15,11 @@ The app will have:
 
 # Getting Started with Create React App
 
+After cloning this project from Github:
+  - cd into "lexicon-challenge"
+  - ten "npm install"
+  - then you can use these scripts below.
+  
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
