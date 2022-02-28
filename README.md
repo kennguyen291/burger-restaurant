@@ -1,3 +1,18 @@
+
+# Context
+This app is a price comparison tool to compare price from two cinemas – Cinemaworld and Filmworld. The app will display both prices, and then calculate to highlight the cheaper ones. The movie catalogue data comes from 2 API, which are not reliable. Therefore, instead of letting the app crashes, a solution has been made to notify users about the issue, and recommend users to reload the page.
+Also, this app can be used properly in both desktop and mobile.
+
+# Architectural elements and decisions
+The app will have: 
+  1.	A page “ClassicMoviesPage” with the pathname “/ClassicMovies”
+  2.	Components to render in the page on different conditions:
+        •	MovieListSkeleton: to roughly display empty templates of elements while the page is waiting to be rendered with data.
+        •	MovieList: to be displayed when client successfully got data back from the request to API.
+        •	Movie: children of Movie, acts as a blueprint to display each movie’s information.
+        •	ErrorComponent: to be displayed when there is error from the API call. 
+  3.	Data: using axios, I request two data sets from two APIs, then used some functions to combine them into one (since these two data sets is pretty much       identical, the only difference is their price) so it is easier for me to pass these data down to components.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
