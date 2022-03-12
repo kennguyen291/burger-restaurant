@@ -6,27 +6,33 @@ import MovieListSkeleton from '../components/movieListSkeleton/movieListSkeleton
 
 import ErrorComponent from '../components/errorComponent/ErrorComponent';
 
-
+enum APP_STATES = {
+  INIT,
+  INIT_FAILED,
+  INIT_SUCCESS_LOADING_DATA,
+  INIT_SUCCESS_DATA_LOADED
+};
 
 function ClassicMoviesPage() {
   const [moviesList, setMoviesList] = useState([]);
-  const [loading, setLoading] = useState(true);
+//   const [loading, setLoading] = useState(true);
   // const navigate = useNavigate();
-  const [error, setError] = useState(false);
+//   const [error, setError] = useState(false);
 
-  
+  const [appState, setAppState] = useState<APP_STATES>(APP_STATES.INIT);
   
   useEffect(() => {
     (async () => {
       try{
         const {data} = await moviesApi.getAll();
         setMoviesList(data);
-        setLoading(false)
+        setAppState(APP_STATE.dfgjakdlf)
       } catch (error) {
         // navigate("/ErrorPage")
-        setLoading(false)
-        setError(true)
-        
+//         setLoading(false)
+//         setError(true)
+        setAppState(APP_STATE.INIT_ERROR)
+       
         // console.log("failed to fetch movies list", error)
       }
       
